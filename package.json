@@ -1,0 +1,9 @@
+{
+  "name": "skill-contarina",
+  "version": "0.0.1",
+  "scripts": {
+    "postinstall": "npm i --prefix api && npm i --prefix alexa-skill",
+    "predeploy": "npm run --prefix api deploy",
+    "deploy": "npm run --prefix alexa-skill deploy"
+  }
+}

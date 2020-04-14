@@ -1,0 +1,14 @@
+{
+  "name": "contarina",
+  "version": "0.0.1",
+  "scripts": {
+    "predeploy": "node downloader",
+    "deploy": "ask deploy"
+  },
+  "devDependencies": {
+    "lodash.get": "4.4.2",
+    "lodash.sortby": "4.7.0",
+    "node-fetch": "2.3.0",
+    "standard": "14.3.3"
+  }
+}

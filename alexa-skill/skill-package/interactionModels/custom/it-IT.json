@@ -1,0 +1,3329 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "conta rina",
+      "intents": [
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "vorrei un aiuto",
+            "Non so cosa fare",
+            "Aiutami"
+          ]
+        },
+        {
+          "name": "DayEmptyingIntent",
+          "slots": [
+            {
+              "name": "Date",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "Domani"
+              ]
+            },
+            {
+              "name": "City",
+              "type": "AMAZON.City",
+              "samples": [
+                "Treviso"
+              ]
+            },
+            {
+              "name": "Zone",
+              "type": "Zone",
+              "samples": [
+                "centro storico"
+              ]
+            }
+          ],
+          "samples": [
+            "Cosa ritirano il {Date} a {City} in zona {Zone}",
+            "Cosa ritirano {Date} a {City} in zona {Zone}",
+            "Cosa ritirano il {Date}",
+            "Cosa ritirano {Date}",
+            "Cosa portano via il {Date} a {City} in zona {Zone}",
+            "Cosa portano via {Date} a {City} in zona {Zone}",
+            "Cosa portano via il {Date}",
+            "Cosa portano via {Date}"
+          ]
+        },
+        {
+          "name": "AskNextEmptying",
+          "slots": [
+            {
+              "name": "What",
+              "type": "Material",
+              "samples": [
+                "Carta"
+              ]
+            },
+            {
+              "name": "City",
+              "type": "AMAZON.City",
+              "samples": [
+                "Treviso"
+              ]
+            },
+            {
+              "name": "Zone",
+              "type": "Zone",
+              "samples": [
+                "centro storico"
+              ]
+            }
+          ],
+          "samples": [
+            "Quando ritirano il {What} a {City} in zona {Zone}",
+            "Quando ritirano il {What} a {City}",
+            "Quando ritirano la {What} in zona {Zone} a {City}",
+            "Quando ritirano {What} in zona {Zone}",
+            "Quando è il prossimo ritiro",
+            "Quando ritirano il {What}",
+            "Quando ritirano la {What}",
+            "Quando ritirano {What}"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "Esci",
+            "Basta",
+            "Non Adesso"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Vegetale"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta"
+              }
+            },
+            {
+              "name": {
+                "value": "Secco"
+              }
+            },
+            {
+              "name": {
+                "value": "Indiferenziato"
+              }
+            },
+            {
+              "name": {
+                "value": "Umido"
+              }
+            },
+            {
+              "name": {
+                "value": "Plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Vetro"
+              }
+            },
+            {
+              "name": {
+                "value": "Alluminio"
+              }
+            }
+          ],
+          "name": "Material"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Arcade"
+              }
+            },
+            {
+              "name": {
+                "value": "Breda di Piave"
+              }
+            },
+            {
+              "name": {
+                "value": "Carbonera"
+              }
+            },
+            {
+              "name": {
+                "value": "Casale sul Sile"
+              }
+            },
+            {
+              "name": {
+                "value": "Casier"
+              }
+            },
+            {
+              "name": {
+                "value": "Giavera del Montello"
+              }
+            },
+            {
+              "name": {
+                "value": "Maserada sul Piave"
+              }
+            },
+            {
+              "name": {
+                "value": "Monastier di Treviso"
+              }
+            },
+            {
+              "name": {
+                "value": "Morgano"
+              }
+            },
+            {
+              "name": {
+                "value": "Nervesa della Battaglia"
+              }
+            },
+            {
+              "name": {
+                "value": "Paese"
+              }
+            },
+            {
+              "name": {
+                "value": "Ponzano Veneto"
+              }
+            },
+            {
+              "name": {
+                "value": "Povegliano"
+              }
+            },
+            {
+              "name": {
+                "value": "Preganziol"
+              }
+            },
+            {
+              "name": {
+                "value": "Quinto di Treviso"
+              }
+            },
+            {
+              "name": {
+                "value": "Roncade"
+              }
+            },
+            {
+              "name": {
+                "value": "San Biagio di Callalta"
+              }
+            },
+            {
+              "name": {
+                "value": "Silea"
+              }
+            },
+            {
+              "name": {
+                "value": "Spresiano"
+              }
+            },
+            {
+              "name": {
+                "value": "Susegana"
+              }
+            },
+            {
+              "name": {
+                "value": "Treviso"
+              }
+            },
+            {
+              "name": {
+                "value": "Villorba"
+              }
+            },
+            {
+              "name": {
+                "value": "Volpago del Montello"
+              }
+            },
+            {
+              "name": {
+                "value": "Zenson di Piave"
+              }
+            },
+            {
+              "name": {
+                "value": "Zero Branco"
+              }
+            },
+            {
+              "name": {
+                "value": "Altivole"
+              }
+            },
+            {
+              "name": {
+                "value": "Asolo"
+              }
+            },
+            {
+              "name": {
+                "value": "Borso del Grappa"
+              }
+            },
+            {
+              "name": {
+                "value": "Caerano di San Marco"
+              }
+            },
+            {
+              "name": {
+                "value": "Castelcucco"
+              }
+            },
+            {
+              "name": {
+                "value": "Castelfranco Veneto"
+              }
+            },
+            {
+              "name": {
+                "value": "Castello di Godego"
+              }
+            },
+            {
+              "name": {
+                "value": "Cavaso del Tomba"
+              }
+            },
+            {
+              "name": {
+                "value": "Cornuda"
+              }
+            },
+            {
+              "name": {
+                "value": "Crespano del Grappa"
+              }
+            },
+            {
+              "name": {
+                "value": "Crocetta del Montello"
+              }
+            },
+            {
+              "name": {
+                "value": "Fonte"
+              }
+            },
+            {
+              "name": {
+                "value": "Istrana"
+              }
+            },
+            {
+              "name": {
+                "value": "Loria"
+              }
+            },
+            {
+              "name": {
+                "value": "Maser"
+              }
+            },
+            {
+              "name": {
+                "value": "Monfumo"
+              }
+            },
+            {
+              "name": {
+                "value": "Montebelluna"
+              }
+            },
+            {
+              "name": {
+                "value": "Paderno del Grappa"
+              }
+            },
+            {
+              "name": {
+                "value": "Pederobba"
+              }
+            },
+            {
+              "name": {
+                "value": "Ponzano Veneto"
+              }
+            },
+            {
+              "name": {
+                "value": "Possagno"
+              }
+            },
+            {
+              "name": {
+                "value": "Resana"
+              }
+            },
+            {
+              "name": {
+                "value": "Riese Pio X"
+              }
+            },
+            {
+              "name": {
+                "value": "San Zenone degli Ezzelini"
+              }
+            },
+            {
+              "name": {
+                "value": "Trevignano"
+              }
+            },
+            {
+              "name": {
+                "value": "Vedelago"
+              }
+            }
+          ],
+          "name": "AMAZON.City"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "cintura urbana"
+              }
+            },
+            {
+              "name": {
+                "value": "fuori mura"
+              }
+            },
+            {
+              "name": {
+                "value": "centro storico"
+              }
+            },
+            {
+              "name": {
+                "value": "fuori centro storico"
+              }
+            }
+          ],
+          "name": "Zone"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Abiti usati"
+              }
+            },
+            {
+              "name": {
+                "value": "Accendini"
+              }
+            },
+            {
+              "name": {
+                "value": "Adesivi"
+              }
+            },
+            {
+              "name": {
+                "value": "Adesivi - carta posizionata sul retro di adesivi, figurine, etichette adesive"
+              }
+            },
+            {
+              "name": {
+                "value": "Albero di Natale sintetico"
+              }
+            },
+            {
+              "name": {
+                "value": "Alimenti avariati"
+              }
+            },
+            {
+              "name": {
+                "value": "Alluminio (vaschette, pellicole, ecc.)"
+              }
+            },
+            {
+              "name": {
+                "value": "Amianto"
+              }
+            },
+            {
+              "name": {
+                "value": "Antiparassitari"
+              }
+            },
+            {
+              "name": {
+                "value": "Appendiabiti da terra o da parete in metallo o plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Articoli per l’edilizia (ad es. tubi)"
+              }
+            },
+            {
+              "name": {
+                "value": "Assorbenti igienici"
+              }
+            },
+            {
+              "name": {
+                "value": "Avanzi di cibo"
+              }
+            },
+            {
+              "name": {
+                "value": "Bacinelle e contenitori in plastica rigida"
+              }
+            },
+            {
+              "name": {
+                "value": "Barattoli di vernice e solventi"
+              }
+            },
+            {
+              "name": {
+                "value": "Barattoli di colla puliti"
+              }
+            },
+            {
+              "name": {
+                "value": "Barattoli di colla sporchi"
+              }
+            },
+            {
+              "name": {
+                "value": "Barattoli e contenitori in plastica per alimenti"
+              }
+            },
+            {
+              "name": {
+                "value": "Barattoli in acciaio, latta o banda stagnata vuoti e puliti"
+              }
+            },
+            {
+              "name": {
+                "value": "Barattoli in plastica per il confezionamento di prodotti vari"
+              }
+            },
+            {
+              "name": {
+                "value": "Batterie esauste d’auto e moto"
+              }
+            },
+            {
+              "name": {
+                "value": "Batterie per cellulari"
+              }
+            },
+            {
+              "name": {
+                "value": "Biancheria per la casa  usata (tende, lenzuola, asciugamani, canovacci, ecc)"
+              }
+            },
+            {
+              "name": {
+                "value": "Bicchieri in carta o cartoncino puliti"
+              }
+            },
+            {
+              "name": {
+                "value": "Bicchieri in carta o cartoncino sporchi"
+              }
+            },
+            {
+              "name": {
+                "value": "Bicchieri in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Bicchieri e coppette in materiale compostabile (cellulosa, amido di mais…)"
+              }
+            },
+            {
+              "name": {
+                "value": "Bicicletta rotta"
+              }
+            },
+            {
+              "name": {
+                "value": "Blister e contenitori sagomati  in plastica (ad es. di giocattoli, cancelleria…)"
+              }
+            },
+            {
+              "name": {
+                "value": "Blister per medicinali"
+              }
+            },
+            {
+              "name": {
+                "value": "Bombolette spray etichettate con simboli di pericolo (insetticida, lacca, ecc.)"
+              }
+            },
+            {
+              "name": {
+                "value": "Borse di pelle o tela usate"
+              }
+            },
+            {
+              "name": {
+                "value": "Bottiglie di vetro"
+              }
+            },
+            {
+              "name": {
+                "value": "Bottiglie in plastica per acqua, bibite, olio, ecc."
+              }
+            },
+            {
+              "name": {
+                "value": "Bottoni"
+              }
+            },
+            {
+              "name": {
+                "value": "Brick per succo di frutta, tè (senza cannuccia)"
+              }
+            },
+            {
+              "name": {
+                "value": "Buste, borsette, confezioni pulite in nylon e plastica "
+              }
+            },
+            {
+              "name": {
+                "value": "Buste di carta"
+              }
+            },
+            {
+              "name": {
+                "value": "Bustine del tè"
+              }
+            },
+            {
+              "name": {
+                "value": "Caffè (confezione)"
+              }
+            },
+            {
+              "name": {
+                "value": "Calcinacci"
+              }
+            },
+            {
+              "name": {
+                "value": "Calzature usate"
+              }
+            },
+            {
+              "name": {
+                "value": "Calze in nylon"
+              }
+            },
+            {
+              "name": {
+                "value": "Calzini usati"
+              }
+            },
+            {
+              "name": {
+                "value": "Candele - cera"
+              }
+            },
+            {
+              "name": {
+                "value": "Candele - contenitori in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Candele - contenitori in alluminio"
+              }
+            },
+            {
+              "name": {
+                "value": "Canne per irrigazione"
+              }
+            },
+            {
+              "name": {
+                "value": "Cannucce"
+              }
+            },
+            {
+              "name": {
+                "value": "Capelli e peli"
+              }
+            },
+            {
+              "name": {
+                "value": "Capsule del caffè in plastica o alluminio vuote e pulite"
+              }
+            },
+            {
+              "name": {
+                "value": "Card plastificate"
+              }
+            },
+            {
+              "name": {
+                "value": "Caricabatterie per cellulari o simili "
+              }
+            },
+            {
+              "name": {
+                "value": "Carta assorbente da cucina"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta carbone"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta cerata"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta da forno"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta plastificata"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta salumaio pulita"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta salumaio sporca"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta stagnola e vaschette in alluminio"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta vetrata"
+              }
+            },
+            {
+              "name": {
+                "value": "Cartongesso"
+              }
+            },
+            {
+              "name": {
+                "value": "Cartoni pizza puliti"
+              }
+            },
+            {
+              "name": {
+                "value": "Cartoni pizza sporchi"
+              }
+            },
+            {
+              "name": {
+                "value": "Cartoni per bevande e alimenti (ad es. per latte, vino, succhi di frutta, passata di pomodoro, ecc.) puliti e senza parti in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Cartoni piegati (grandi quantità)"
+              }
+            },
+            {
+              "name": {
+                "value": "Cartoni piegati (piccole quantità)"
+              }
+            },
+            {
+              "name": {
+                "value": "Cartucce esauste per stampanti"
+              }
+            },
+            {
+              "name": {
+                "value": "Cassette di legno"
+              }
+            },
+            {
+              "name": {
+                "value": "Cassette di plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Cavi elettrici"
+              }
+            },
+            {
+              "name": {
+                "value": "CD e DVD  "
+              }
+            },
+            {
+              "name": {
+                "value": "Cellophane e pellicole"
+              }
+            },
+            {
+              "name": {
+                "value": "Ceneri spente di caminetti"
+              }
+            },
+            {
+              "name": {
+                "value": "Ceramica"
+              }
+            },
+            {
+              "name": {
+                "value": "Cerotti"
+              }
+            },
+            {
+              "name": {
+                "value": "Cesto di vimini"
+              }
+            },
+            {
+              "name": {
+                "value": "Cinture usate"
+              }
+            },
+            {
+              "name": {
+                "value": "Componenti elettronici"
+              }
+            },
+            {
+              "name": {
+                "value": "Computer"
+              }
+            },
+            {
+              "name": {
+                "value": "Condizionatori"
+              }
+            },
+            {
+              "name": {
+                "value": "Contenitore etichettato con simboli di pericolo"
+              }
+            },
+            {
+              "name": {
+                "value": "Contenitore in vetro"
+              }
+            },
+            {
+              "name": {
+                "value": "Coperchi metallici"
+              }
+            },
+            {
+              "name": {
+                "value": "Coperte usate"
+              }
+            },
+            {
+              "name": {
+                "value": "Copertoni (es. bicicletta) senza cerchione"
+              }
+            },
+            {
+              "name": {
+                "value": "Coppette del gelato in carta pulite"
+              }
+            },
+            {
+              "name": {
+                "value": "Coppette del gelato in carta sporche"
+              }
+            },
+            {
+              "name": {
+                "value": "Coppette del gelato in plastica pulite"
+              }
+            },
+            {
+              "name": {
+                "value": "Coppette del gelato in plastica sporche"
+              }
+            },
+            {
+              "name": {
+                "value": "Cosmetici"
+              }
+            },
+            {
+              "name": {
+                "value": "Cotone"
+              }
+            },
+            {
+              "name": {
+                "value": "Cotton fioc compostabile"
+              }
+            },
+            {
+              "name": {
+                "value": "Cotton fioc con parti in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Damigiane"
+              }
+            },
+            {
+              "name": {
+                "value": "Dentifricio (tubetto vuoto)"
+              }
+            },
+            {
+              "name": {
+                "value": "Deodorante per auto"
+              }
+            },
+            {
+              "name": {
+                "value": "Deodorante personale con contenitore in plastica o vetro"
+              }
+            },
+            {
+              "name": {
+                "value": "Diserbanti e disinfestanti"
+              }
+            },
+            {
+              "name": {
+                "value": "Divani"
+              }
+            },
+            {
+              "name": {
+                "value": "Elastici"
+              }
+            },
+            {
+              "name": {
+                "value": "Elettrodomestici  di grandi dimensioni (frigoriferi, lavastoviglie, televisori, computer…)"
+              }
+            },
+            {
+              "name": {
+                "value": "Elettrodomestici di piccole dimensioni (cellulari, frullatori, videogiochi…)"
+              }
+            },
+            {
+              "name": {
+                "value": "Erba"
+              }
+            },
+            {
+              "name": {
+                "value": "Escrementi di piccoli animali domestici"
+              }
+            },
+            {
+              "name": {
+                "value": "Evidenziatori"
+              }
+            },
+            {
+              "name": {
+                "value": "Farmaci scaduti"
+              }
+            },
+            {
+              "name": {
+                "value": "Fazzoletti e tovaglioli di carta usati"
+              }
+            },
+            {
+              "name": {
+                "value": "Ferro e metalli"
+              }
+            },
+            {
+              "name": {
+                "value": "Filo interdentale"
+              }
+            },
+            {
+              "name": {
+                "value": "Finestre"
+              }
+            },
+            {
+              "name": {
+                "value": "Fiori finti in plastica o altro materiale"
+              }
+            },
+            {
+              "name": {
+                "value": "Fiori recisi e fogliame in piccole quantità"
+              }
+            },
+            {
+              "name": {
+                "value": "Flaconi e dispenser in plastica o vetro per il confezionamento di prodotti vari"
+              }
+            },
+            {
+              "name": {
+                "value": "Fogli di carta"
+              }
+            },
+            {
+              "name": {
+                "value": "Foglie"
+              }
+            },
+            {
+              "name": {
+                "value": "Fondi e cialde compostabili di caffè"
+              }
+            },
+            {
+              "name": {
+                "value": "Forbici con parti in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Forbici in metallo"
+              }
+            },
+            {
+              "name": {
+                "value": "Fotografie"
+              }
+            },
+            {
+              "name": {
+                "value": "Gancetti chiudi sacco in plastica con anima in ferro"
+              }
+            },
+            {
+              "name": {
+                "value": "Giocattoli di grandi dimensioni"
+              }
+            },
+            {
+              "name": {
+                "value": "Giocattoli di piccole dimensioni in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Giocattoli di piccole dimensioni in legno"
+              }
+            },
+            {
+              "name": {
+                "value": "Giornali e riviste"
+              }
+            },
+            {
+              "name": {
+                "value": "Gommapiuma"
+              }
+            },
+            {
+              "name": {
+                "value": "Gomme da masticare"
+              }
+            },
+            {
+              "name": {
+                "value": "Grucce appendiabiti in metallo"
+              }
+            },
+            {
+              "name": {
+                "value": "Grucce appendiabiti in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Guanti in gomma"
+              }
+            },
+            {
+              "name": {
+                "value": "Gusci di uova, cozze, vongole, crostacei "
+              }
+            },
+            {
+              "name": {
+                "value": "Inerti (ceramica, terracotta, piastrelle, mattoni, ecc.)"
+              }
+            },
+            {
+              "name": {
+                "value": "Infissi"
+              }
+            },
+            {
+              "name": {
+                "value": "Lampadine a filamento"
+              }
+            },
+            {
+              "name": {
+                "value": "Lampade a risparmio energetico (neon, led)"
+              }
+            },
+            {
+              "name": {
+                "value": "Lastre in vetro"
+              }
+            },
+            {
+              "name": {
+                "value": "Lattine in alluminio (ad es. di bibite)"
+              }
+            },
+            {
+              "name": {
+                "value": "Legno "
+              }
+            },
+            {
+              "name": {
+                "value": "Lenti a contatto"
+              }
+            },
+            {
+              "name": {
+                "value": "Lettiere non sintetiche di piccoli animali domestici, anche con escrementi"
+              }
+            },
+            {
+              "name": {
+                "value": "Lettiere sintetiche di piccoli animali domestici, anche con escrementi"
+              }
+            },
+            {
+              "name": {
+                "value": "Libri"
+              }
+            },
+            {
+              "name": {
+                "value": "Lische di Pesce"
+              }
+            },
+            {
+              "name": {
+                "value": "Lumini - cera di lumino"
+              }
+            },
+            {
+              "name": {
+                "value": "Lumini - contenitori in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Lumini - contenitori in alluminio"
+              }
+            },
+            {
+              "name": {
+                "value": "Materassi"
+              }
+            },
+            {
+              "name": {
+                "value": "Matite senza gomme e parti metalliche"
+              }
+            },
+            {
+              "name": {
+                "value": "Mattoni"
+              }
+            },
+            {
+              "name": {
+                "value": "Mobili (in legno, vimini, laminato, plastica…)"
+              }
+            },
+            {
+              "name": {
+                "value": "Mollette di legno"
+              }
+            },
+            {
+              "name": {
+                "value": "Mollette di plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Mozziconi di sigaretta ben spenti"
+              }
+            },
+            {
+              "name": {
+                "value": "Musicassette"
+              }
+            },
+            {
+              "name": {
+                "value": "Nastri per confezioni"
+              }
+            },
+            {
+              "name": {
+                "value": "Nastro adesivo"
+              }
+            },
+            {
+              "name": {
+                "value": "Negativi fotografici"
+              }
+            },
+            {
+              "name": {
+                "value": "Neon e lampade a scarica"
+              }
+            },
+            {
+              "name": {
+                "value": "Nylon per imballaggi"
+              }
+            },
+            {
+              "name": {
+                "value": "Occhiali rotti"
+              }
+            },
+            {
+              "name": {
+                "value": "Oggetti in gomma"
+              }
+            },
+            {
+              "name": {
+                "value": "Olio alimentare"
+              }
+            },
+            {
+              "name": {
+                "value": "Olio per motori"
+              }
+            },
+            {
+              "name": {
+                "value": "Ombrelli rotti"
+              }
+            },
+            {
+              "name": {
+                "value": "Ossi (es. braciola, pollo, lische di pesce, ecc.)"
+              }
+            },
+            {
+              "name": {
+                "value": "Ovatta"
+              }
+            },
+            {
+              "name": {
+                "value": "Pacchetti di sigarette senza parti in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Palette in plastica del gelato o del caffè"
+              }
+            },
+            {
+              "name": {
+                "value": "Parasole per auto"
+              }
+            },
+            {
+              "name": {
+                "value": "Peluche"
+              }
+            },
+            {
+              "name": {
+                "value": "Penne e pennarelli"
+              }
+            },
+            {
+              "name": {
+                "value": "Pannolini"
+              }
+            },
+            {
+              "name": {
+                "value": "Pennelli"
+              }
+            },
+            {
+              "name": {
+                "value": "Pentole in metallo"
+              }
+            },
+            {
+              "name": {
+                "value": "Pesce e molluschi"
+              }
+            },
+            {
+              "name": {
+                "value": "Pesticidi"
+              }
+            },
+            {
+              "name": {
+                "value": "Piante senza terra"
+              }
+            },
+            {
+              "name": {
+                "value": "Piastrelle"
+              }
+            },
+            {
+              "name": {
+                "value": "Piatti e posate in materiale compostabile (cellulosa, amido di mais…)"
+              }
+            },
+            {
+              "name": {
+                "value": "Piatti e stoviglie in ceramica"
+              }
+            },
+            {
+              "name": {
+                "value": "Piatti, bicchieri e stoviglie usa e getta in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Pile esauste"
+              }
+            },
+            {
+              "name": {
+                "value": "Pirofile in ceramica o oggetti in pirex"
+              }
+            },
+            {
+              "name": {
+                "value": "Pneumatici auto e moto senza cerchioni"
+              }
+            },
+            {
+              "name": {
+                "value": "Polistirolo (imballaggi)"
+              }
+            },
+            {
+              "name": {
+                "value": "Portadocumenti e cartellette in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Posate in metallo"
+              }
+            },
+            {
+              "name": {
+                "value": "Posate (forchette, coltelli, cucchiai) usa e getta in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Profumo (contenitore vuoto in plastica o vetro)"
+              }
+            },
+            {
+              "name": {
+                "value": "Quaderni"
+              }
+            },
+            {
+              "name": {
+                "value": "Raccoglitori dossier in cartone senza parti metalliche"
+              }
+            },
+            {
+              "name": {
+                "value": "Radiografie"
+              }
+            },
+            {
+              "name": {
+                "value": "Ramaglie, potature di alberi e siepi"
+              }
+            },
+            {
+              "name": {
+                "value": "Rasoi usa e getta in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Reggette per pacchi"
+              }
+            },
+            {
+              "name": {
+                "value": "Residui vegetali dell’orto"
+              }
+            },
+            {
+              "name": {
+                "value": "Resti di frutta, verdura e alimenti"
+              }
+            },
+            {
+              "name": {
+                "value": "Reti per frutta e verdura"
+              }
+            },
+            {
+              "name": {
+                "value": "Reti per letti"
+              }
+            },
+            {
+              "name": {
+                "value": "Rotoli e anime di carta (es. carta igienica, carta da cucina, ecc.)"
+              }
+            },
+            {
+              "name": {
+                "value": "Sacche per dialisi e per stomatizzati"
+              }
+            },
+            {
+              "name": {
+                "value": "Sacchetti in carta"
+              }
+            },
+            {
+              "name": {
+                "value": "Sacchetti ed altri imballaggi in più materiali difficilmente separabili (ad es. sacchetti in carta e alluminio)"
+              }
+            },
+            {
+              "name": {
+                "value": "Sacchetti, borse e involucri puliti in nylon o plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Sacchetti, borse e involucri sporchi in nylon o plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Sacchi e scatole in plastica per il confezionamento degli abiti"
+              }
+            },
+            {
+              "name": {
+                "value": "Sacchi per aspirapolvere"
+              }
+            },
+            {
+              "name": {
+                "value": "Salviette in carta pulite"
+              }
+            },
+            {
+              "name": {
+                "value": "Salviette in carta sporche"
+              }
+            },
+            {
+              "name": {
+                "value": "Scarpe usate"
+              }
+            },
+            {
+              "name": {
+                "value": "Scarponi da sci rotti"
+              }
+            },
+            {
+              "name": {
+                "value": "Scatole in metallo (ad es. per biscotti, cioccolatini, ecc.)"
+              }
+            },
+            {
+              "name": {
+                "value": "Sci"
+              }
+            },
+            {
+              "name": {
+                "value": "Scontrini in carta chimica "
+              }
+            },
+            {
+              "name": {
+                "value": "Segatura (piccole quantità)"
+              }
+            },
+            {
+              "name": {
+                "value": "Sfalci d’erba"
+              }
+            },
+            {
+              "name": {
+                "value": "Siringhe chiuse col tappo"
+              }
+            },
+            {
+              "name": {
+                "value": "Spazzolini da denti in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Specchio"
+              }
+            },
+            {
+              "name": {
+                "value": "Spugne per fiori"
+              }
+            },
+            {
+              "name": {
+                "value": "Spugne sintetiche"
+              }
+            },
+            {
+              "name": {
+                "value": "Stecchi in legno del gelato"
+              }
+            },
+            {
+              "name": {
+                "value": "Stoppino per candele"
+              }
+            },
+            {
+              "name": {
+                "value": "Stuzzicadenti"
+              }
+            },
+            {
+              "name": {
+                "value": "Stracci"
+              }
+            },
+            {
+              "name": {
+                "value": "Tamponi per timbri"
+              }
+            },
+            {
+              "name": {
+                "value": "Tappi di sughero"
+              }
+            },
+            {
+              "name": {
+                "value": "Tappi metallici"
+              }
+            },
+            {
+              "name": {
+                "value": "Tazze e tazzine in ceramica rotte"
+              }
+            },
+            {
+              "name": {
+                "value": "Televisori"
+              }
+            },
+            {
+              "name": {
+                "value": "Tergicristalli rotti"
+              }
+            },
+            {
+              "name": {
+                "value": "Termoconvettori e termosifoni"
+              }
+            },
+            {
+              "name": {
+                "value": "Termometro a mercurio"
+              }
+            },
+            {
+              "name": {
+                "value": "Termometro digitale"
+              }
+            },
+            {
+              "name": {
+                "value": "Termometro senza mercurio"
+              }
+            },
+            {
+              "name": {
+                "value": "Terra e terriccio da vaso"
+              }
+            },
+            {
+              "name": {
+                "value": "Terracotta"
+              }
+            },
+            {
+              "name": {
+                "value": "Toner"
+              }
+            },
+            {
+              "name": {
+                "value": "Tovaglioli in carta puliti"
+              }
+            },
+            {
+              "name": {
+                "value": "Tovaglioli in carta sporchi"
+              }
+            },
+            {
+              "name": {
+                "value": "Truciolato (piccole quantità)"
+              }
+            },
+            {
+              "name": {
+                "value": "Trucioli di tempera della matita o pastelli"
+              }
+            },
+            {
+              "name": {
+                "value": "Tubetti metallici vuoti (es. per maionese, lucido da scarpe, ecc.)"
+              }
+            },
+            {
+              "name": {
+                "value": "Tubi in gomma"
+              }
+            },
+            {
+              "name": {
+                "value": "Tulle"
+              }
+            },
+            {
+              "name": {
+                "value": "Vaschette sagomate in plastica o polistirolo per alimenti e per oggetti vari"
+              }
+            },
+            {
+              "name": {
+                "value": "Vasetti in plastica dello yogurt"
+              }
+            },
+            {
+              "name": {
+                "value": "Vasi in plastica per fiori, puliti "
+              }
+            },
+            {
+              "name": {
+                "value": "Vassoi e confezioni in cartoncino"
+              }
+            },
+            {
+              "name": {
+                "value": "Vetro (bottiglie e vasetti)"
+              }
+            },
+            {
+              "name": {
+                "value": "Videocassette "
+              }
+            },
+            {
+              "name": {
+                "value": "Videogiochi"
+              }
+            },
+            {
+              "name": {
+                "value": "Zanzariere"
+              }
+            },
+            {
+              "name": {
+                "value": "Zerbini"
+              }
+            },
+            {
+              "name": {
+                "value": "Abiti usati"
+              }
+            },
+            {
+              "name": {
+                "value": "Accendini"
+              }
+            },
+            {
+              "name": {
+                "value": "Adesivi"
+              }
+            },
+            {
+              "name": {
+                "value": "Adesivi - carta posizionata sul retro di adesivi, figurine, etichette adesive"
+              }
+            },
+            {
+              "name": {
+                "value": "Albero di Natale sintetico"
+              }
+            },
+            {
+              "name": {
+                "value": "Alimenti avariati"
+              }
+            },
+            {
+              "name": {
+                "value": "Alluminio (vaschette, pellicole, ecc.)"
+              }
+            },
+            {
+              "name": {
+                "value": "Amianto"
+              }
+            },
+            {
+              "name": {
+                "value": "Antiparassitari"
+              }
+            },
+            {
+              "name": {
+                "value": "Appendiabiti da terra o da parete in metallo o plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Articoli per l’edilizia (ad es. tubi)"
+              }
+            },
+            {
+              "name": {
+                "value": "Assorbenti igienici"
+              }
+            },
+            {
+              "name": {
+                "value": "Avanzi di cibo"
+              }
+            },
+            {
+              "name": {
+                "value": "Bacinelle e contenitori in plastica rigida"
+              }
+            },
+            {
+              "name": {
+                "value": "Barattoli di vernice e solventi"
+              }
+            },
+            {
+              "name": {
+                "value": "Barattoli di colla puliti"
+              }
+            },
+            {
+              "name": {
+                "value": "Barattoli di colla sporchi"
+              }
+            },
+            {
+              "name": {
+                "value": "Barattoli e contenitori in plastica per alimenti"
+              }
+            },
+            {
+              "name": {
+                "value": "Barattoli in latta o banda stagnata vuoti e puliti"
+              }
+            },
+            {
+              "name": {
+                "value": "Barattoli in plastica per il confezionamento di prodotti vari"
+              }
+            },
+            {
+              "name": {
+                "value": "Batterie esauste d’auto e moto"
+              }
+            },
+            {
+              "name": {
+                "value": "Batterie per cellulari"
+              }
+            },
+            {
+              "name": {
+                "value": "Biancheria per la casa  usata (tende, lenzuola, asciugamani, canovacci, ecc)"
+              }
+            },
+            {
+              "name": {
+                "value": "Bicchieri di carta o cartoncino puliti"
+              }
+            },
+            {
+              "name": {
+                "value": "Bicchieri di carta o cartoncino sporchi"
+              }
+            },
+            {
+              "name": {
+                "value": "Bicchieri di plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Bicchieri e coppette in materiale compostabile (cellulosa, amido di mais…)"
+              }
+            },
+            {
+              "name": {
+                "value": "Bicicletta rotta"
+              }
+            },
+            {
+              "name": {
+                "value": "Blister e contenitori sagomati  in plastica (ad es. di giocattoli, cancelleria…)"
+              }
+            },
+            {
+              "name": {
+                "value": "Blister in più materiali (ad es. plastica e alluminio) per medicinali"
+              }
+            },
+            {
+              "name": {
+                "value": "Bombolette spray etichettate con simboli di pericolo (insetticida, lacca, ecc.)"
+              }
+            },
+            {
+              "name": {
+                "value": "Borse di pelle o tela usate"
+              }
+            },
+            {
+              "name": {
+                "value": "Bottiglie di vetro"
+              }
+            },
+            {
+              "name": {
+                "value": "Bottiglie in plastica per acqua, bibite, olio, ecc."
+              }
+            },
+            {
+              "name": {
+                "value": "Bottoni"
+              }
+            },
+            {
+              "name": {
+                "value": "Brick per succo di frutta, tè (senza cannuccia)"
+              }
+            },
+            {
+              "name": {
+                "value": "Buste, borsette, confezioni pulite in nylon e plastica per alimenti"
+              }
+            },
+            {
+              "name": {
+                "value": "Buste di carta"
+              }
+            },
+            {
+              "name": {
+                "value": "Bustine del tè"
+              }
+            },
+            {
+              "name": {
+                "value": "Caffè (confezione)"
+              }
+            },
+            {
+              "name": {
+                "value": "Calcinacci"
+              }
+            },
+            {
+              "name": {
+                "value": "Calzature usate"
+              }
+            },
+            {
+              "name": {
+                "value": "Calze in nylon"
+              }
+            },
+            {
+              "name": {
+                "value": "Calzini usati"
+              }
+            },
+            {
+              "name": {
+                "value": "Candele - cera"
+              }
+            },
+            {
+              "name": {
+                "value": "Candele - contenitori in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Candele - contenitori in alluminio"
+              }
+            },
+            {
+              "name": {
+                "value": "Canne per irrigazione"
+              }
+            },
+            {
+              "name": {
+                "value": "Cannucce"
+              }
+            },
+            {
+              "name": {
+                "value": "Capelli e peli"
+              }
+            },
+            {
+              "name": {
+                "value": "Capsule per macchinette del caffè"
+              }
+            },
+            {
+              "name": {
+                "value": "Card plastificate"
+              }
+            },
+            {
+              "name": {
+                "value": "Caricabatterie per cellulari o simili "
+              }
+            },
+            {
+              "name": {
+                "value": "Carta assorbente da cucina"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta carbone"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta cerata"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta da forno"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta plastificata"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta salumaio pulita"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta salumaio sporca"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta stagnola e vaschette in alluminio"
+              }
+            },
+            {
+              "name": {
+                "value": "Carta vetrata"
+              }
+            },
+            {
+              "name": {
+                "value": "Cartongesso"
+              }
+            },
+            {
+              "name": {
+                "value": "Cartoni pizza puliti"
+              }
+            },
+            {
+              "name": {
+                "value": "Cartoni pizza sporchi"
+              }
+            },
+            {
+              "name": {
+                "value": "Cartoni per bevande e alimenti puliti e senza parti in plastica (es. Tetra Pak)"
+              }
+            },
+            {
+              "name": {
+                "value": "Cartoni piegati (grandi quantità)"
+              }
+            },
+            {
+              "name": {
+                "value": "Cartoni piegati (piccole quantità)"
+              }
+            },
+            {
+              "name": {
+                "value": "Cartucce esauste per stampanti"
+              }
+            },
+            {
+              "name": {
+                "value": "Cassette di legno"
+              }
+            },
+            {
+              "name": {
+                "value": "Cassette di plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Cavi elettrici"
+              }
+            },
+            {
+              "name": {
+                "value": "CD e DVD  "
+              }
+            },
+            {
+              "name": {
+                "value": "Cellophane e pellicole"
+              }
+            },
+            {
+              "name": {
+                "value": "Ceneri spente di caminetti"
+              }
+            },
+            {
+              "name": {
+                "value": "Ceramica"
+              }
+            },
+            {
+              "name": {
+                "value": "Cerotti"
+              }
+            },
+            {
+              "name": {
+                "value": "Cesto di vimini"
+              }
+            },
+            {
+              "name": {
+                "value": "Cinture usate"
+              }
+            },
+            {
+              "name": {
+                "value": "Componenti elettronici"
+              }
+            },
+            {
+              "name": {
+                "value": "Computer"
+              }
+            },
+            {
+              "name": {
+                "value": "Condizionatori"
+              }
+            },
+            {
+              "name": {
+                "value": "Contenitore etichettato con simboli di pericolo"
+              }
+            },
+            {
+              "name": {
+                "value": "Contenitore in vetro"
+              }
+            },
+            {
+              "name": {
+                "value": "Coperchi metallici"
+              }
+            },
+            {
+              "name": {
+                "value": "Coperte usate"
+              }
+            },
+            {
+              "name": {
+                "value": "Copertoni (es. bicicletta)"
+              }
+            },
+            {
+              "name": {
+                "value": "Coppette del gelato di carta pulite"
+              }
+            },
+            {
+              "name": {
+                "value": "Coppette del gelato di carta sporche"
+              }
+            },
+            {
+              "name": {
+                "value": "Coppette del gelato di plastica pulite"
+              }
+            },
+            {
+              "name": {
+                "value": "Coppette del gelato di plastica sporche"
+              }
+            },
+            {
+              "name": {
+                "value": "Cosmetici"
+              }
+            },
+            {
+              "name": {
+                "value": "Cotone"
+              }
+            },
+            {
+              "name": {
+                "value": "Cotton fioc compostabile"
+              }
+            },
+            {
+              "name": {
+                "value": "Cotton fioc con parti in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Damigiane"
+              }
+            },
+            {
+              "name": {
+                "value": "Dentifricio (tubetto vuoto)"
+              }
+            },
+            {
+              "name": {
+                "value": "Deodorante per auto"
+              }
+            },
+            {
+              "name": {
+                "value": "Deodorante personale con contenitore in plastica o vetro"
+              }
+            },
+            {
+              "name": {
+                "value": "Diserbanti e disinfestanti"
+              }
+            },
+            {
+              "name": {
+                "value": "Divani"
+              }
+            },
+            {
+              "name": {
+                "value": "Elastici"
+              }
+            },
+            {
+              "name": {
+                "value": "Elettrodomestici  di grandi dimensioni (frigoriferi, lavastoviglie, televisori, computer…)"
+              }
+            },
+            {
+              "name": {
+                "value": "Elettrodomestici di piccole dimensioni (cellulari, frullatori, videogiochi…)"
+              }
+            },
+            {
+              "name": {
+                "value": "Erba"
+              }
+            },
+            {
+              "name": {
+                "value": "Escrementi di piccoli animali domestici"
+              }
+            },
+            {
+              "name": {
+                "value": "Evidenziatori"
+              }
+            },
+            {
+              "name": {
+                "value": "Farmaci scaduti"
+              }
+            },
+            {
+              "name": {
+                "value": "Fazzoletti e tovaglioli di carta usati"
+              }
+            },
+            {
+              "name": {
+                "value": "Ferro e metalli"
+              }
+            },
+            {
+              "name": {
+                "value": "Filo interdentale"
+              }
+            },
+            {
+              "name": {
+                "value": "Finestre"
+              }
+            },
+            {
+              "name": {
+                "value": "Fiori finti in plastica o altro materiale"
+              }
+            },
+            {
+              "name": {
+                "value": "Fiori recisi e fogliame in piccole quantità"
+              }
+            },
+            {
+              "name": {
+                "value": "Flaconi e dispenser in plastica o vetro per il confezionamento di prodotti vari"
+              }
+            },
+            {
+              "name": {
+                "value": "Fogli di carta"
+              }
+            },
+            {
+              "name": {
+                "value": "Foglie"
+              }
+            },
+            {
+              "name": {
+                "value": "Fondi e cialde compostabili di caffè"
+              }
+            },
+            {
+              "name": {
+                "value": "Forbici con parti in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Forbici in metallo"
+              }
+            },
+            {
+              "name": {
+                "value": "Fotografie"
+              }
+            },
+            {
+              "name": {
+                "value": "Gancetti chiudi sacco in plastica con anima in ferro"
+              }
+            },
+            {
+              "name": {
+                "value": "Giocattoli di grandi dimensioni"
+              }
+            },
+            {
+              "name": {
+                "value": "Giocattoli di piccole dimensioni in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Giocattoli di piccole dimensioni in legno"
+              }
+            },
+            {
+              "name": {
+                "value": "Giornali e riviste"
+              }
+            },
+            {
+              "name": {
+                "value": "Gommapiuma"
+              }
+            },
+            {
+              "name": {
+                "value": "Gomme da masticare"
+              }
+            },
+            {
+              "name": {
+                "value": "Grucce appendiabiti in metallo"
+              }
+            },
+            {
+              "name": {
+                "value": "Grucce appendiabiti in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Guanti in gomma"
+              }
+            },
+            {
+              "name": {
+                "value": "Gusci di uova, cozze, vongole, crostacei "
+              }
+            },
+            {
+              "name": {
+                "value": "Inerti (ceramica, terracotta, piastrelle, mattoni, ecc.)"
+              }
+            },
+            {
+              "name": {
+                "value": "Infissi"
+              }
+            },
+            {
+              "name": {
+                "value": "Lampadine a filamento"
+              }
+            },
+            {
+              "name": {
+                "value": "Lampade a risparmio energetico"
+              }
+            },
+            {
+              "name": {
+                "value": "Lastre di vetro"
+              }
+            },
+            {
+              "name": {
+                "value": "Lattine in alluminio"
+              }
+            },
+            {
+              "name": {
+                "value": "Legno "
+              }
+            },
+            {
+              "name": {
+                "value": "Lenti a contatto"
+              }
+            },
+            {
+              "name": {
+                "value": "Lettiere non sintetiche di piccoli animali domestici, anche con escrementi"
+              }
+            },
+            {
+              "name": {
+                "value": "Lettiere sintetiche di piccoli animali domestici, anche con escrementi"
+              }
+            },
+            {
+              "name": {
+                "value": "Libri"
+              }
+            },
+            {
+              "name": {
+                "value": "Lische di Pesce"
+              }
+            },
+            {
+              "name": {
+                "value": "Lumini - cera di lumino"
+              }
+            },
+            {
+              "name": {
+                "value": "Lumini - contenitori in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Lumini - contenitori in alluminio"
+              }
+            },
+            {
+              "name": {
+                "value": "Materassi"
+              }
+            },
+            {
+              "name": {
+                "value": "Matite senza gomme e parti metalliche"
+              }
+            },
+            {
+              "name": {
+                "value": "Mattoni"
+              }
+            },
+            {
+              "name": {
+                "value": "Mobili (in legno, vimini, laminato, plastica…)"
+              }
+            },
+            {
+              "name": {
+                "value": "Mollette di legno"
+              }
+            },
+            {
+              "name": {
+                "value": "Mollette di plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Mozziconi di sigaretta ben spenti"
+              }
+            },
+            {
+              "name": {
+                "value": "Musicassette "
+              }
+            },
+            {
+              "name": {
+                "value": "Nastri per fiori"
+              }
+            },
+            {
+              "name": {
+                "value": "Nastro adesivo"
+              }
+            },
+            {
+              "name": {
+                "value": "Negativi fotografici"
+              }
+            },
+            {
+              "name": {
+                "value": "Neon e lampade a scarica"
+              }
+            },
+            {
+              "name": {
+                "value": "Nylon per imballaggi"
+              }
+            },
+            {
+              "name": {
+                "value": "Occhiali rotti"
+              }
+            },
+            {
+              "name": {
+                "value": "Oggetti in gomma"
+              }
+            },
+            {
+              "name": {
+                "value": "Olio da cucina"
+              }
+            },
+            {
+              "name": {
+                "value": "Olio per motori"
+              }
+            },
+            {
+              "name": {
+                "value": "Ombrelli rotti"
+              }
+            },
+            {
+              "name": {
+                "value": "Ossi (es. braciola, pollo, lische di pesce, ecc.)"
+              }
+            },
+            {
+              "name": {
+                "value": "Ovatta"
+              }
+            },
+            {
+              "name": {
+                "value": "Pacchetti di sigarette senza parti in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Palette del gelato"
+              }
+            },
+            {
+              "name": {
+                "value": "Parasole per auto"
+              }
+            },
+            {
+              "name": {
+                "value": "Peluche"
+              }
+            },
+            {
+              "name": {
+                "value": "Penne e pennarelli"
+              }
+            },
+            {
+              "name": {
+                "value": "Pannolini"
+              }
+            },
+            {
+              "name": {
+                "value": "Pennelli"
+              }
+            },
+            {
+              "name": {
+                "value": "Pentole in metallo"
+              }
+            },
+            {
+              "name": {
+                "value": "Pesce e molluschi"
+              }
+            },
+            {
+              "name": {
+                "value": "Pesticidi"
+              }
+            },
+            {
+              "name": {
+                "value": "Piante senza terra"
+              }
+            },
+            {
+              "name": {
+                "value": "Piastrelle"
+              }
+            },
+            {
+              "name": {
+                "value": "Piatti e posate in materiale compostabile (cellulosa, amido di mais…)"
+              }
+            },
+            {
+              "name": {
+                "value": "Piatti e stoviglie in ceramica"
+              }
+            },
+            {
+              "name": {
+                "value": "Piatti e bicchieri usa e getta in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Pile esauste"
+              }
+            },
+            {
+              "name": {
+                "value": "Pirofile"
+              }
+            },
+            {
+              "name": {
+                "value": "Pneumatici auto e moto"
+              }
+            },
+            {
+              "name": {
+                "value": "Polistirolo (imballaggi)"
+              }
+            },
+            {
+              "name": {
+                "value": "Portadocumenti e cartellette in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Posate in metallo"
+              }
+            },
+            {
+              "name": {
+                "value": "Posate usa e getta in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Profumo (contenitore vuoto in plastica o vetro)"
+              }
+            },
+            {
+              "name": {
+                "value": "Quaderni"
+              }
+            },
+            {
+              "name": {
+                "value": "Raccoglitori dossier in cartone senza parti metalliche"
+              }
+            },
+            {
+              "name": {
+                "value": "Radiografie"
+              }
+            },
+            {
+              "name": {
+                "value": "Ramaglie, potature di alberi e siepi"
+              }
+            },
+            {
+              "name": {
+                "value": "Rasoi usa e getta in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Reggette per pacchi"
+              }
+            },
+            {
+              "name": {
+                "value": "Residui vegetali dell’orto"
+              }
+            },
+            {
+              "name": {
+                "value": "Resti di frutta, verdura e alimenti"
+              }
+            },
+            {
+              "name": {
+                "value": "Reti per frutta e verdura"
+              }
+            },
+            {
+              "name": {
+                "value": "Reti per letti"
+              }
+            },
+            {
+              "name": {
+                "value": "Rotoli e anime di carta (es. carta igienica, carta da cucina, ecc.)"
+              }
+            },
+            {
+              "name": {
+                "value": "Sacche per dialisi e per stomatizzati"
+              }
+            },
+            {
+              "name": {
+                "value": "Sacchetti di carta"
+              }
+            },
+            {
+              "name": {
+                "value": "Sacchetti ed altri imballaggi in più materiali difficilmente separabili"
+              }
+            },
+            {
+              "name": {
+                "value": "Sacchetti, borse e involucri puliti in nylon o plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Sacchetti, borse e involucri sporchi in nylon o plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Sacchi e scatole in plastica per il confezionamento degli abiti"
+              }
+            },
+            {
+              "name": {
+                "value": "Sacchi per aspirapolvere"
+              }
+            },
+            {
+              "name": {
+                "value": "Salviette di carta pulite"
+              }
+            },
+            {
+              "name": {
+                "value": "Salviette di carta sporche"
+              }
+            },
+            {
+              "name": {
+                "value": "Scarpe usate"
+              }
+            },
+            {
+              "name": {
+                "value": "Scarponi da sci rotti"
+              }
+            },
+            {
+              "name": {
+                "value": "Scatole in latta"
+              }
+            },
+            {
+              "name": {
+                "value": "Scii"
+              }
+            },
+            {
+              "name": {
+                "value": "Scontrini in carta chimica "
+              }
+            },
+            {
+              "name": {
+                "value": "Segatura (piccole quantità)"
+              }
+            },
+            {
+              "name": {
+                "value": "Sfalci d’erba"
+              }
+            },
+            {
+              "name": {
+                "value": "Siringhe chiuse col tappo"
+              }
+            },
+            {
+              "name": {
+                "value": "Spazzolini da denti"
+              }
+            },
+            {
+              "name": {
+                "value": "Specchio"
+              }
+            },
+            {
+              "name": {
+                "value": "Spugne per fiori"
+              }
+            },
+            {
+              "name": {
+                "value": "Spugne sintetiche"
+              }
+            },
+            {
+              "name": {
+                "value": "Stecchi in legno del gelato"
+              }
+            },
+            {
+              "name": {
+                "value": "Stoppino per candele"
+              }
+            },
+            {
+              "name": {
+                "value": "Stuzzicadenti"
+              }
+            },
+            {
+              "name": {
+                "value": "Stracci sporchi"
+              }
+            },
+            {
+              "name": {
+                "value": "Tamponi per timbri"
+              }
+            },
+            {
+              "name": {
+                "value": "Tappi di sughero"
+              }
+            },
+            {
+              "name": {
+                "value": "Tappi metallici"
+              }
+            },
+            {
+              "name": {
+                "value": "Tazze e tazzine in ceramica rotte"
+              }
+            },
+            {
+              "name": {
+                "value": "Televisori"
+              }
+            },
+            {
+              "name": {
+                "value": "Tergicristalli rotti"
+              }
+            },
+            {
+              "name": {
+                "value": "Termoconvettori e termosifoni"
+              }
+            },
+            {
+              "name": {
+                "value": "Termometro a mercurio"
+              }
+            },
+            {
+              "name": {
+                "value": "Termometro digitale"
+              }
+            },
+            {
+              "name": {
+                "value": "Termometro senza mercurio"
+              }
+            },
+            {
+              "name": {
+                "value": "Terra e terriccio da vaso"
+              }
+            },
+            {
+              "name": {
+                "value": "Terracotta"
+              }
+            },
+            {
+              "name": {
+                "value": "Toner"
+              }
+            },
+            {
+              "name": {
+                "value": "Tovaglioli di carta puliti"
+              }
+            },
+            {
+              "name": {
+                "value": "Tovaglioli di carta sporchi"
+              }
+            },
+            {
+              "name": {
+                "value": "Truciolato (piccole quantità)"
+              }
+            },
+            {
+              "name": {
+                "value": "Trucioli di tempera della matita o pastelli"
+              }
+            },
+            {
+              "name": {
+                "value": "Tubetti metallici vuoti (es. per maionese, lucido da scarpe, ecc.)"
+              }
+            },
+            {
+              "name": {
+                "value": "Tubi in gomma"
+              }
+            },
+            {
+              "name": {
+                "value": "Tulle"
+              }
+            },
+            {
+              "name": {
+                "value": "Vaschette sagomate in plastica o polistirolo per alimenti e per oggetti vari"
+              }
+            },
+            {
+              "name": {
+                "value": "Vasetti in plastica dello yogurt"
+              }
+            },
+            {
+              "name": {
+                "value": "Vasi in plastica per fiori, puliti "
+              }
+            },
+            {
+              "name": {
+                "value": "Vassoi e confezioni in cartoncino"
+              }
+            },
+            {
+              "name": {
+                "value": "Vetro"
+              }
+            },
+            {
+              "name": {
+                "value": "Videocassette"
+              }
+            },
+            {
+              "name": {
+                "value": "Videogiochi"
+              }
+            },
+            {
+              "name": {
+                "value": "Zanzariere"
+              }
+            },
+            {
+              "name": {
+                "value": "Zerbini"
+              }
+            },
+            {
+              "name": {
+                "value": "Custodie in plastica di cd, dvd e videocassette"
+              }
+            },
+            {
+              "name": {
+                "value": "Custodie in plastica di cd, dvd e videocassette"
+              }
+            },
+            {
+              "name": {
+                "value": "Lana di vetro"
+              }
+            },
+            {
+              "name": {
+                "value": "Lana di roccia"
+              }
+            },
+            {
+              "name": {
+                "value": "Guaina catramata"
+              }
+            },
+            {
+              "name": {
+                "value": "Lana di roccia"
+              }
+            },
+            {
+              "name": {
+                "value": "Lana di vetro"
+              }
+            },
+            {
+              "name": {
+                "value": "Guaina catramata"
+              }
+            },
+            {
+              "name": {
+                "value": "Floppy disk"
+              }
+            },
+            {
+              "name": {
+                "value": "Floppy disk"
+              }
+            },
+            {
+              "name": {
+                "value": "Test di gravidanza"
+              }
+            },
+            {
+              "name": {
+                "value": "Punti metallici della cucitrice"
+              }
+            },
+            {
+              "name": {
+                "value": "Graffette di metallo"
+              }
+            },
+            {
+              "name": {
+                "value": "Battiscopa in legno"
+              }
+            },
+            {
+              "name": {
+                "value": "Bicchieri in vetro (senza decori e non in cristallo)"
+              }
+            },
+            {
+              "name": {
+                "value": "Bombolette in alluminio asenza simboli di pericolo (ad es. per la panna)"
+              }
+            },
+            {
+              "name": {
+                "value": "Capsule e cialde compostabili per macchinette del caffè"
+              }
+            },
+            {
+              "name": {
+                "value": "Ciabatte rotte"
+              }
+            },
+            {
+              "name": {
+                "value": "Confezioni in cartoncino (ad es. per pasta, dentifricio, cereali, ecc.)"
+              }
+            },
+            {
+              "name": {
+                "value": "Cornici in legno"
+              }
+            },
+            {
+              "name": {
+                "value": "Forni"
+              }
+            },
+            {
+              "name": {
+                "value": "Frigoriferi"
+              }
+            },
+            {
+              "name": {
+                "value": "Frullatori a immersione"
+              }
+            },
+            {
+              "name": {
+                "value": "Grucce appendiabiti in legno"
+              }
+            },
+            {
+              "name": {
+                "value": "Latte in banda stagnata "
+              }
+            },
+            {
+              "name": {
+                "value": "Lavastoviglie"
+              }
+            },
+            {
+              "name": {
+                "value": "Lavatrici"
+              }
+            },
+            {
+              "name": {
+                "value": "Palette in legno del caffè"
+              }
+            },
+            {
+              "name": {
+                "value": "Quadri (cornice in legno)"
+              }
+            },
+            {
+              "name": {
+                "value": "Robot da cucina"
+              }
+            },
+            {
+              "name": {
+                "value": "Scarpe rotte o spaiate"
+              }
+            },
+            {
+              "name": {
+                "value": "Scatole in plastica per il confezionamento di abiti"
+              }
+            },
+            {
+              "name": {
+                "value": "Scatolette in metallo per cibo (es. pelati, tonno, piselli, ecc.) e pet food"
+              }
+            },
+            {
+              "name": {
+                "value": "Scatoloni in cartone (grandi quantità)"
+              }
+            },
+            {
+              "name": {
+                "value": "Scatoloni in cartone (piccole quantità)"
+              }
+            },
+            {
+              "name": {
+                "value": "Soprammobili"
+              }
+            },
+            {
+              "name": {
+                "value": "Stendibiancheria"
+              }
+            },
+            {
+              "name": {
+                "value": "Taglieri in legno"
+              }
+            },
+            {
+              "name": {
+                "value": "Taglieri in plastica"
+              }
+            },
+            {
+              "name": {
+                "value": "Tessere e card plastificate"
+              }
+            },
+            {
+              "name": {
+                "value": "Vaschette e vassoi in alluminio per alimenti"
+              }
+            },
+            {
+              "name": {
+                "value": "Vasetti e contenitori in vetro"
+              }
+            },
+            {
+              "name": {
+                "value": "Profilattici"
+              }
+            },
+            {
+              "name": {
+                "value": "Preservativi"
+              }
+            }
+          ],
+          "name": "Rifiuti"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "AskNextEmptying",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "What",
+              "type": "Material",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1263766485461.1178989197525"
+              }
+            },
+            {
+              "name": "City",
+              "type": "AMAZON.City",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1263766485461.1497497573256"
+              }
+            },
+            {
+              "name": "Zone",
+              "type": "Zone",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1263766485461.1417745958623"
+              }
+            }
+          ]
+        },
+        {
+          "name": "DayEmptyingIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Date",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1165298200127.270099038827"
+              }
+            },
+            {
+              "name": "City",
+              "type": "AMAZON.City",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "Zone",
+              "type": "Zone",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        }
+      ],
+      "delegationStrategy": "SKILL_RESPONSE"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1263766485461.1178989197525",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "A quale rifiuto sei interessato?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1263766485461.1417745958623",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "In che zona"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1263766485461.1497497573256",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "In che città"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1165298200127.270099038827",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Di che data ti interessano gli svuotamenti?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "23"
+}

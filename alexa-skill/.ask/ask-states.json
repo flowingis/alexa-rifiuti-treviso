@@ -1,0 +1,28 @@
+{
+  "askcliStatesVersion": "2020-03-31",
+  "profiles": {
+    "default": {
+      "skillId": "amzn1.ask.skill.1b7311ff-5464-4adc-a84f-cdeab8c828bf",
+      "skillMetadata": {
+        "lastDeployHash": "fxriapV327Xp9Fmp3B0Ai9KDc1U="
+      },
+      "code": {
+        "default": {}
+      },
+      "skillInfrastructure": {
+        "@ask-cli/lambda-deployer": {
+          "deployState": {
+            "default": {
+              "lambda": {
+                "arn": "arn:aws:lambda:eu-west-1:383537978421:function:ask-custom-contarina",
+                "lastModified": "2020-04-14T20:49:59.839+0000",
+                "revisionId": "ddc299cb-68ce-4d26-aa4f-4b60dfeb9f02"
+              },
+              "iamRole": "arn:aws:iam::383537978421:role/ask-lambda-Contarina"
+            }
+          }
+        }
+      }
+    }
+  }
+}

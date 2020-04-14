@@ -1,0 +1,19 @@
+{
+  "name": "rifiuti-treviso-api",
+  "version": "0.0.1",
+  "scripts": {
+    "predeploy": "node downloader",
+    "deploy": "sls deploy"
+  },
+  "devDependencies": {
+    "node-fetch": "2.3.0",
+    "serverless": "^1.67.3",
+    "standard": "14.3.3"
+  },
+  "dependencies": {
+    "lodash.sortby": "4.7.0",
+    "lodash.get": "^4.4.2",
+    "moment": "^2.24.0",
+    "serialize-error": "^6.0.0"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "it-IT": {
+          "summary": "Skill per la raccolta differenziata della Provincia di Treviso",
+          "examplePhrases": [
+            "Alexa, chiedi a raccolta differenziata treviso quando ritirano la carta in zona cintura urbana",
+            "Alexa, chiedi a raccolta differenziata treviso quando ritirano la plastica",
+            "Alexa, chiedi a raccolta differenziata treviso quando ritirano la carta a roncade"
+          ],
+          "keywords": [
+            "Rifiuti",
+            "Treviso",
+            "Differenziata"
+          ],
+          "name": "Contarina",
+          "smallIconUri": "file://assets/images/it-IT_smallIconUri.png",
+          "description": "Con questa skill puoi richiedere quando sarà ritirato uno specifico tipo di rifiuto nella tua zona.",
+          "largeIconUri": "file://assets/images/it-IT_largeIconUri.png"
+        }
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "Just fullow the testing instructions",
+      "category": "ORGANIZERS_AND_ASSISTANTS",
+      "distributionCountries": [
+        "IT"
+      ]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:eu-west-1:383537978421:function:ask-custom-contarina"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [
+      {
+        "name": "alexa::alerts:reminders:skill:readwrite"
+      }
+    ],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "it-IT": {
+          "termsOfUseUrl": "https://github.com/ideatosrl/alexa-rifiuti-treviso/blob/master/TERMS_OF_USE.MD"
+        }
+      },
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

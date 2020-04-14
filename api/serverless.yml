@@ -1,0 +1,29 @@
+service: rifiuti-treviso-api
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: eu-west-1
+
+functions:
+  hello:
+    handler: src/svuotamenti.list
+    events:
+      - http:
+          path: svuotamenti/{city}
+          method: get
+          request: 
+          parameters: 
+             paths: 
+               city: true
+  zone:
+    handler: src/zone.list
+    events:
+      - http:
+          path: zone/{city}
+          method: get
+          request: 
+          parameters: 
+             paths: 
+               city: true
