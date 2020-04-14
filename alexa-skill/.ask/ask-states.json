@@ -15,8 +15,8 @@
             "default": {
               "lambda": {
                 "arn": "arn:aws:lambda:eu-west-1:383537978421:function:ask-custom-contarina",
-                "lastModified": "2020-04-14T20:49:59.839+0000",
-                "revisionId": "ddc299cb-68ce-4d26-aa4f-4b60dfeb9f02"
+                "lastModified": "2020-04-14T20:53:59.992+0000",
+                "revisionId": "de5b9f96-4ec5-48d7-9cbf-22083c353470"
               },
               "iamRole": "arn:aws:iam::383537978421:role/ask-lambda-Contarina"
             }
