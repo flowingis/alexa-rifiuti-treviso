@@ -1,26 +1,42 @@
 const fetch = require('node-fetch')
-const sort = require('lodash.sortby')
 const get = require('lodash.get')
+const set = require('lodash.set')
 const fs = require('fs')
 const path = require('path')
 const secrets = require('./secrets.json')
 
-const downloadSvuotamenti = async () => {
-  const r = await fetch(secrets.URL_SVUOTAMENTI)
-  const data = await r.json()
-  return data
+const interactionModel = require('./skill-package/interactionModels/custom/it-IT.json')
+
+const UniqueBy = path => (value, index, self) => {
+  const currentValue = get(value, path)
+  return !self.find(element => get(element, path) === currentValue)
 }
 
-const downloadComuni = async () => {
-  const r = await fetch(secrets.URL_COMUNI)
-  const data = await r.json()
-  return data
-}
+const updateInteractionModel = dizionario => {
+  const types = get(interactionModel, 'interactionModel.languageModel.types', [])
+  const typesWithoutDizionario = types.filter(type => {
+    return type.name !== 'Rifiuti'
+  })
 
-const downloadZone = async () => {
-  const r = await fetch(secrets.URL_ZONE)
-  const data = await r.json()
-  return data
+  const typeDizionario = {
+    name: 'Rifiuti',
+    values: dizionario
+      .filter(UniqueBy('titolo'))
+      .map(entry => {
+        return {
+          id: entry.id + '',
+          name: {
+            value: entry.titolo
+          }
+        }
+      })
+  }
+
+  set(interactionModel, 'interactionModel.languageModel.types', [...typesWithoutDizionario, typeDizionario])
+
+  const data = JSON.stringify(interactionModel, null, 2)
+
+  fs.writeFileSync(path.join('skill-package', 'interactionModels', 'custom', 'it-IT.json'), data, 'utf8')
 }
 
 const downloadDizionario = async () => {
@@ -33,14 +49,6 @@ const downloadTipoContenitori = async () => {
   const r = await fetch(secrets.URL_CONTENITORI)
   const data = await r.json()
   return data
-}
-
-const getSvuotamenti = s => {
-  try {
-    return JSON.parse(s.svuotamenti)
-  } catch (e) {
-    return []
-  }
 }
 
 const getContenitore = (voceDizionario, contenitori) => {
@@ -67,35 +75,11 @@ const writeDataDizionario = async () => {
       }
     }).filter(d => d.contenitore)
 
+  updateInteractionModel(mapped)
+
   fs.writeFileSync(path.join('lambda', 'lambdacustom', 'dizionario.json'), JSON.stringify(mapped), 'utf8')
-}
-
-const writeDatiSvuotamenti = async () => {
-  const svuotamenti = await downloadSvuotamenti()
-  const comuni = await downloadComuni()
-  const zone = await downloadZone()
-
-  const mapped = svuotamenti
-    .map(s => {
-      const zona = zone.find(z => z.id === s.id_refer)
-      let comune
-      if (zona) {
-        comune = comuni.find(c => c.cod_istat === zona.comune_id)
-      }
-      return {
-        ...s,
-        svuotamenti: getSvuotamenti(s),
-        zona: zona ? zona.zona : '',
-        comune: comune ? comune.comune : ''
-      }
-    }).filter(s => s.svuotamenti.length > 0)
-
-  const data = JSON.stringify(sort(mapped, 'giorno'))
-
-  fs.writeFileSync(path.join('lambda', 'lambdacustom', 'svuotamenti.json'), data, 'utf8')
 }
 
 (async () => {
   await writeDataDizionario()
-  await writeDatiSvuotamenti()
 })()
