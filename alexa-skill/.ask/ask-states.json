@@ -4,7 +4,7 @@
     "default": {
       "skillId": "amzn1.ask.skill.1b7311ff-5464-4adc-a84f-cdeab8c828bf",
       "skillMetadata": {
-        "lastDeployHash": "AdlcQOpYU5C1bOqFJXXmFHeYDbQ="
+        "lastDeployHash": "ZUd6NzbKf5u8WXSIo3eay98M/Is="
       },
       "code": {
         "default": {}
@@ -15,8 +15,8 @@
             "default": {
               "lambda": {
                 "arn": "arn:aws:lambda:eu-west-1:383537978421:function:ask-custom-contarina",
-                "lastModified": "2020-04-17T12:02:07.687+0000",
-                "revisionId": "3b63d60c-2838-46be-a82a-225e01533888"
+                "lastModified": "2020-04-17T12:28:42.202+0000",
+                "revisionId": "4136a511-5d81-49d8-9911-ab0b95f2bcf9"
               },
               "iamRole": "arn:aws:iam::383537978421:role/ask-lambda-Contarina"
             }

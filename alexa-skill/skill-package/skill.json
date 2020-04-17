@@ -15,8 +15,8 @@
             "Differenziata"
           ],
           "name": "Contarina",
-          "smallIconUri": "file://assets/images/it-IT_smallIconUri.png",
           "description": "Con questa skill puoi richiedere quando sarà ritirato uno specifico tipo di rifiuto nella tua zona.",
+          "smallIconUri": "file://assets/images/it-IT_smallIconUri.png",
           "largeIconUri": "file://assets/images/it-IT_largeIconUri.png"
         }
       },
@@ -38,6 +38,9 @@
     "manifestVersion": "1.0",
     "permissions": [
       {
+        "name": "alexa::devices:all:address:full:read"
+      },
+      {
         "name": "alexa::alerts:reminders:skill:readwrite"
       }
     ],
@@ -48,8 +51,8 @@
           "termsOfUseUrl": "https://github.com/ideatosrl/alexa-rifiuti-treviso/blob/master/TERMS_OF_USE.MD"
         }
       },
-      "isExportCompliant": true,
       "containsAds": false,
+      "isExportCompliant": true,
       "isChildDirected": false,
       "usesPersonalInfo": false
     }

@@ -440,7 +440,6 @@
           "name": "Zone"
         },
         {
-          "name": "Rifiuti",
           "values": [
             {
               "id": "1",
@@ -3766,7 +3765,8 @@
                 "value": "Preservativi"
               }
             }
-          ]
+          ],
+          "name": "Rifiuti"
         }
       ]
     },
@@ -3879,5 +3879,5 @@
       }
     ]
   },
-  "version": "23"
+  "version": "24"
 }

@@ -2,8 +2,24 @@ const get = require('lodash.get')
 const moment = require('moment')
 const emptyings = require('../lib/emptyings')
 
-const DEFAULT_CITY = 'treviso'
 const DEFAULT_ZONE = 'Cintura Urbana'
+
+const getUserCity = async (handlerInput) => {
+  const { permissions } = handlerInput.requestEnvelope.context.System.user
+  if (!permissions) {
+    return
+  }
+
+  const { deviceId } = handlerInput.requestEnvelope.context.System.device
+  const deviceAddressServiceClient = handlerInput.serviceClientFactory.getDeviceAddressServiceClient()
+  try {
+    const address = await deviceAddressServiceClient.getFullAddress(deviceId)
+
+    return address.city
+  } catch (e) {
+
+  }
+}
 
 module.exports = {
   canHandle (handlerInput) {
@@ -12,12 +28,19 @@ module.exports = {
   },
   async handle (handlerInput) {
     let city = get(handlerInput, 'requestEnvelope.request.intent.slots.City.value', '')
-    let zone = get(handlerInput, 'requestEnvelope.request.intent.slots.Zone.value', '')
+    const zone = get(handlerInput, 'requestEnvelope.request.intent.slots.Zone.value', DEFAULT_ZONE)
     const date = get(handlerInput, 'requestEnvelope.request.intent.slots.Date.value', '')
 
     if (!city) {
-      city = DEFAULT_CITY
-      zone = zone || DEFAULT_ZONE
+      const userCity = await getUserCity(handlerInput)
+      if (!userCity) {
+        return handlerInput.responseBuilder
+          .speak('Non hai attivato i permessi per poter leggere il tuo indirizzo')
+          .withAskForPermissionsConsentCard(['alexa::devices:all:address:full:read'])
+          .getResponse()
+      }
+
+      city = userCity
     }
 
     const isZoneNeeded = await emptyings.cityNeedZone(city)
